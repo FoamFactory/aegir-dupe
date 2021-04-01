@@ -1,0 +1,77 @@
+@import '../../assets/styles/colors';
+
+@mixin header-definition($line-color, $font-color: palette(black),
+                         $background-color: palette(white)) {
+  header:first-child {
+    border-bottom: 3px solid $line-color;
+    margin-bottom: .5em;
+    line-height: 0.75;
+
+    h1 {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    h2,h3,h4,h5,h6 {
+      margin-top: 0.1rem;
+    }
+
+    &.no-border {
+      border-bottom: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $font-color;
+
+      // This next bit makes the border look as though it skips the ascenders and
+      // descenders of text. It only works on a background of the specified color.
+      text-shadow:
+         1px  1px $background-color,
+        -1px  1px $background-color,
+         1px -1px $background-color,
+        -1px -1px $background-color;
+    }
+  }
+}
+
+article {
+  margin: 2em;
+
+  &.management {
+    @include header-definition(palette(grain), palette(black), palette(antique-white));
+  }
+
+  &.dark {
+    p {
+      margin-bottom: inherit;
+      line-height: 19px;
+      border-bottom: none;
+    }
+
+    @include header-definition(palette(cream-ale));
+
+    // On dark backgrounds, we want to blur the text shadow a bit more.
+    h1, h2, h3, h4, h5, h6 {
+      text-shadow:
+         1px  1px 1px palette(white),
+        -1px  1px 1px palette(white),
+         1px -1px 1px palette(white),
+        -1px -1px 1px palette(white);
+    }
+  }
+
+  &.alternate {
+    @include header-definition(palette(jade, dark), palette(jade, darkest));
+  }
+
+  section {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    @include header-definition(palette(california-common));
+  }
+
+  @include header-definition(palette(grain));
+}

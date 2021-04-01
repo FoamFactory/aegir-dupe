@@ -1,0 +1,105 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/colors';
+@import '../../assets/styles/typography';
+
+.ingredientSet-boil {
+  .ingredientSet-inner {
+    .ingredientSet-legend {
+      background-color: palette(jade, faded);
+    }
+  }
+
+  .ingredientSet-phase {
+    background-color: palette(jade, faded);
+  }
+}
+
+.ingredientSet-mash {
+  .ingredientSet-inner {
+    .ingredientSet-legend {
+      background-color: palette(cream-ale, faded);
+    }
+  }
+
+  .ingredientSet-phase {
+    background-color: palette(cream-ale, faded);
+  }
+}
+
+.ingredientSet-primaryFermentation {
+  .ingredientSet-inner {
+    .ingredientSet-legend {
+      background-color: palette(california-common, faded);
+    }
+  }
+
+  .ingredientSet-phase {
+    background-color: palette(california-common, faded);
+  }
+}
+
+.ingredientSet {
+  display: flex;
+  margin-top: 1em;
+  min-height: 4em;
+  overflow: hidden;
+
+  &.ingredientSet-mash {
+    .ingredientSet-inner {
+      grid-template-columns: .25fr .5fr .5fr .25fr .5fr;
+    }
+  }
+
+  &.ingredientSet-boil {
+    .ingredientSet-inner {
+      grid-template-columns: .25fr .5fr .5fr .5fr .25fr;
+    }
+  }
+
+  &.ingredientSet-primaryFermentation {
+    .ingredientSet-inner {
+      grid-template-columns: .25fr .25fr .25fr .5fr .25fr;
+    }
+  }
+
+  .ingredientSet-inner {
+    display: grid;
+    align-self: flex-start;
+    flex: 10 10;
+
+    .ingredientSet-legend {
+      font-family: "Eczar", serif;
+      font-size: 14pt;
+    }
+
+    * {
+      padding-left: .5em;
+    }
+  }
+
+  .ingredientSet-phase {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+
+    * {
+      padding: .5em 0;
+      font-family: "Eczar", serif;
+      font-size: 14pt;
+      align-self: center;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      flex: 5 5;
+    }
+  }
+
+  .ingredientSet-ingredientList {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+}

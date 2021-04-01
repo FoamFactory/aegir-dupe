@@ -1,0 +1,26 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/typography';
+
+.recipe-block-title-section {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  height: 50px;
+
+  .recipe-block-title {
+    width: 100%;
+    font-family: 'Eczar', serif;
+    font-weight: bold;
+    @include font-size(24px);
+    text-shadow: 0 4px 4px rgba(palette(black), 0.25);
+    line-height: 0.9;
+  }
+
+  .recipe-block-version {
+    font-family: 'Eczar', serif;
+    font-weight: bold;
+    @include font-size(14px);
+    text-shadow: 0 4px 4px rgba(palette(black), 0.25);
+    line-height: 0.9;
+  }
+}

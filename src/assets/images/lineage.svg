@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg preserveAspectRatio="xMidYMid meet" fill={this.props.fill} height={this.props.height} viewBox="0 0 37.616273 90.914383">
+  <g transform="translate(-43.746457,-41.388058)">
+    <circle cx="57.830357" cy="48.669643" r="7.1815472" />
+    <circle cx="74.081184" cy="73.994583" r="7.1815476" />
+    <circle cx="62.36607" cy="113.68155" r="18.520834" />
+    <path style={strokeStyle} d="M 57.830357 48.669643 L 74.081184 73.994583" />
+    <path style={strokeStyle} d="M 74.081184 73.994583 L 62.36607 113.68155" />
+   </g>
+ </svg>

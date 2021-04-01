@@ -1,0 +1,58 @@
+@import '../../assets/styles/colors';
+
+.inline-input-button {
+  display: flex;
+  flex-direction: row;
+  height: 2em;
+  line-height: 1.2;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input.left-side {
+    border-bottom: 1px solid palette(french-gray);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 0;
+    border-left: 1px solid palette(french-gray);
+    border-right: none;
+    border-top: 1px solid palette(french-gray);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0;
+    padding: 0.5em;
+
+    &:focus {
+      border-bottom: 1px solid palette(cream-ale);
+      border-left: 1px solid palette(cream-ale);
+      border-top: 1px solid palette(cream-ale);
+      outline: none;
+    }
+  }
+
+  button.right-half-button {
+    background-color: palette(cream-ale);
+    border-bottom: 1px solid palette(french-gray);
+    border-bottom-right-radius: 8px;
+    border-left: none;
+    border-right: 1px solid palette(french-gray);
+    border-top: 1px solid palette(french-gray);
+    border-top-right-radius: 8px;
+    color: palette(charcoal);
+    font-weight: bold;
+    height: 100%;
+    padding-right: 2em;
+    padding-left: 2em;
+
+    &:hover {
+      background-color: palette(cream-ale, light);
+    }
+
+    &:active {
+      background-color: palette(cream-ale, dark);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

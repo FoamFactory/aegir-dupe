@@ -1,0 +1,22 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/contenteditable';
+@import '../../assets/styles/typography';
+
+.editable-heading {
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+  cursor: text;
+  margin-bottom: 1em;
+  color: palette(black);
+
+  * {
+    &:hover {
+      border-bottom: 1px solid palette(thunder, alpha30);
+    }
+  }
+
+  [contenteditable=true] {
+    border-bottom: 1px solid palette(thunder, alpha30);
+  }
+}

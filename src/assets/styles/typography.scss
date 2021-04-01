@@ -1,0 +1,203 @@
+@import 'colors';
+@import 'variables';
+
+@import '~font-awesome/scss/font-awesome';
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin title-font {
+  font-family: "Eczar", serif;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url('@Assets/fonts/WorkSans-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url('@Assets/fonts/WorkSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: medium;
+  src: url('@Assets/fonts/WorkSans-Medium.ttf');
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: medium;
+  font-style: italic;
+  src: url('@Assets/fonts/WorkSans-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: bold;
+  src: url("@Assets/fonts/WorkSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Eczar";
+  src: url("@Assets/fonts/Eczar-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Eczar";
+  font-weight: bold;
+  src: url('@Assets/fonts/Eczar-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("@Assets/fonts/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-weight: bold;
+  src: url("@Assets/fonts/SpaceMono-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: italic;
+  src: url("@Assets/fonts/SpaceMono-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Space Mono";
+  font-style: italic;
+  font-weight: bold;
+  src: url("@Assets/fonts/SpaceMono-BoldItalic.ttf");
+}
+
+@font-face {
+  font-family: "Eczar";
+  font-weight: bold;
+  src: url('@Assets/fonts/Eczar-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url('@Assets/fonts/RobotoCondensed-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+  src: url('@Assets/fonts/RobotoCondensed-Bold.ttf');
+}
+
+p {
+  @include font-size(16px);
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0.1em;
+  letter-spacing: 0.2px;
+
+  &.light {
+    font-weight: lighter;
+  }
+
+  &.subtitle {
+    line-height: 0.95;
+
+    &.paragraph-margin {
+      margin: .1em 10em;
+    }
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Eczar';
+  font-weight: bold;
+  color: palette(black);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid palette(transparent);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &.short {
+    line-height: 1.0;
+  }
+}
+
+h1 {
+  @include font-size(30px);
+}
+
+h2 {
+  @include font-size(24px);
+
+  &.section-title {
+    line-height: 1.0;
+  }
+}
+
+h3 {
+  @include font-size(20px);
+}
+
+h4 {
+  @include font-size(18px);
+}
+
+h5 {
+  @include font-size(16px);
+}
+
+h6 {
+  @include font-size(14px);
+}
+
+pre, tt {
+  font-family: 'Space Mono', monospace;
+}
+
+a {
+  font-family: 'Work Sans', sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: palette(grain, light);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h3 {
+  &.subheading {
+    color: palette(grain, dark);
+    margin-left: 1.25em;
+    text-shadow: 0 0 1px palette(grain, darkest);
+  }
+}
+
+h4 {
+  color: palette(grain, dark);
+}
+
+.section-description {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  margin-left: 12px;
+}

@@ -1,0 +1,27 @@
+.search-listing-options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+  .sort-dropdown {
+    flex: 1 1 150px;
+  }
+
+  .search-bar {
+    flex: 10 10 auto;
+  }
+
+  .listing-options {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+
+    * {
+      margin: 0.25em;
+      align-self: end;
+    }
+  }
+}

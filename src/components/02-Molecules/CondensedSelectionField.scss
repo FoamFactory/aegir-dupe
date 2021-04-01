@@ -1,0 +1,10 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/form-inputs';
+@import '../../assets/styles/typography';
+
+.condensed-selection-field-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  grid-template-rows: 80%;
+}

@@ -1,0 +1,26 @@
+.editable-container {
+  user-select: none;
+  cursor: text;
+  margin-bottom: 1em;
+  color: palette(black);
+
+  [contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+  [contenteditable="true"] {
+    border-bottom: 1px solid palette(thunder, alpha30);
+  }
+
+  .editable-field {
+    cursor: text;
+
+    &:focus {
+      outline: 0px solid transparent;
+    }
+
+    &:hover {
+      border-bottom: 1px solid palette(thunder, alpha30);
+    }
+  }
+}

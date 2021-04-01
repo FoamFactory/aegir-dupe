@@ -1,0 +1,41 @@
+@import '../../assets/styles/typography';
+@import '../../assets/styles/colors';
+
+.dropdown {
+  color: palette(tin);
+  font-family: 'Work Sans', sans-serif;
+
+  .dropdown-toggle {
+    fill: palette(tin);
+    display: flex;
+    align-items: center;
+
+    .inline-icon {
+      margin-right: 0.25em;
+    }
+  }
+
+  .dropdown-item {
+    &.active {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .dropdown-menu {
+    ul {
+      padding: 0;
+
+      a {
+        color: palette(tin);
+        padding: 0.5em 0.5em 0.5em 0.5em;
+
+        &.active:after {
+          margin-left: 0.5em;
+          color: palette(cream-ale);
+          font-family: 'FontAwesome';
+          content: '\f00c';
+        }
+      }
+    }
+  }
+}

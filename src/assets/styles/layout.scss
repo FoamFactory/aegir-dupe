@@ -1,0 +1,76 @@
+@import 'colors';
+@import 'grid';
+
+// TODO_jwir3: These should be integrated with the grids we took from Ninkasi,
+//             which are in _grid.scss.
+.grid-two-column-even {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.grid-two-column-first-small {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: .5rem;
+}
+
+.tool-container {
+  position: relative;
+  margin: 0;
+  height: calc(100% - 4em);
+}
+
+.small-block {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .small-block-icon {
+    position: absolute;
+    height: 100%;
+    z-index: -2;
+    margin: auto auto;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  h4 {
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  & > * {
+    flex: 1 1 auto;
+
+    &.block-content {
+      flex: 10 10 auto;
+      min-width: 124px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        margin: 0;
+        font-family: "Eczar", serif;
+        font-weight: normal;
+        text-align: center;
+        font-size: 10pt;
+        color: palette(thunder);
+        font-weight: bold;
+        line-height: 0.9;
+
+        &:first-child {
+          font-family: "Eczar", serif;
+          font-size: 12pt;
+          color: palette(black);
+        }
+      }
+    }
+  }
+}

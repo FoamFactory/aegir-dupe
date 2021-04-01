@@ -1,0 +1,22 @@
+.tool-container {
+  position: relative;
+  margin: 0;
+  min-height: calc(100vh - 4em);
+  z-index: 4;
+
+  section.tool {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5em;
+    padding: 1em 2em;
+    position: relative;
+
+    > * {
+      flex: 3 3;
+    }
+
+    > .main {
+      flex: 5 5;
+    }
+  }
+}

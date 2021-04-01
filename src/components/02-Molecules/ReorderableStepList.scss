@@ -1,0 +1,37 @@
+@import '../../assets/styles/colors';
+
+.reorderable-step {
+  display: grid;
+  grid-template-columns: 2em 1fr 1em;
+  list-style: none;
+  margin: .5em 0em;
+  padding: .5em;
+  border: 1px solid palette(thunder, alpha30);
+
+  * {
+    align-self: center;
+  }
+
+  .reorderable-step_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .reorderable-step-list_delete-button {
+      visibility: hidden;
+      padding-left: 2em;
+
+      &:hover {
+        color: palette(thunder, light);
+      }
+
+      &:active {
+        color: palette(cream-ale, dark);
+      }
+
+      &.displayed {
+        visibility: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../assets/styles/colors';
+
+.subPhase {
+  display: flex;
+  width: 100%;
+
+  .subPhase-timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 10%;
+    background-color: palette(thunder, alpha80);
+
+    &.cream {
+      background-color: palette(cream-ale, washedout);
+    }
+
+    p {
+      padding: 0 .5em;
+      margin: 0;
+      font-family: "Eczar", serif;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .subPhase-steps {
+    background-color: palette(thunder, alpha30);
+    flex: 10 10 90%;
+    padding: 1em;
+
+    &.cream {
+      background-color: palette(cream-ale, faded);
+    }
+  }
+}

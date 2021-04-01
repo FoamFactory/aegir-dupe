@@ -1,0 +1,14 @@
+@import 'colors';
+
+// import required partials
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/button-group';
+@import '~bootstrap/scss/dropdown';
+
+.dropdown-item {
+  width: auto !important;
+}

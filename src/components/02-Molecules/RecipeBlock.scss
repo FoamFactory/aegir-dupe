@@ -1,0 +1,147 @@
+@import '../../assets/styles/colors';
+@import '../../assets/styles/typography';
+
+.recipe-block {
+  background-color: palette(white);
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 4fr;
+  justify-items: center;
+  width: 300px;
+  height: 235px;
+  border: 1px solid palette(black);
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px palette(black, alpha25);
+  margin-left: 1em;
+  margin-right: 1em;
+
+  &.dragging {
+    opacity: 0.25;
+  }
+
+  .recipe-block-title-section {
+    margin-top: 1em;
+  }
+
+  // XXX_jwir3: This cool code was taken from:
+  //            https://codepen.io/jwir3/pen/yLVQWdm
+  .wave {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    x: 10px;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    width: 100%;
+    background-color: palette(white);
+
+    // The border here is so that we don't overlap the rounded corners and draw
+    // outside the bounds of the recipe block.
+    border: 0px 1px 1px 1px solid palette(black);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-repeat: repeat-x;
+    }
+
+    &::before {
+      height: 10px;
+      background-size: 20px 20px;
+      background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+    }
+
+    &::after {
+      height: 15px;
+      background-size: 40px 20px;
+      background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+    }
+
+    &--top {
+      &::before,
+      &::after {
+        // to take place in top instead of bottom
+        bottom: auto;
+        top: 0;
+      }
+
+      &::before {
+        background-image: radial-gradient(circle at 10px 15px, transparent 12px, white 13px);
+      }
+
+      &::after {
+        background-image: radial-gradient(circle at 10px 0, white 12px, transparent 13px);
+      }
+    }
+
+    .recipe-beer-content {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+
+      .recipe-block-subtitle-group {
+        flex: 1 1 auto;
+        margin-top: 1.5em;
+
+        .recipe-block-subtitle {
+          color: palette(white);
+          font-family: 'Eczar', serif;
+          @include font-size(14px);
+          font-weight: bold;
+          line-height: 1.1;
+          text-align: center;
+          text-shadow: 0px 4px 4px palette(black, alpha25);
+
+          &.dark-text {
+            color: palette(black);
+            // color: darken(palette(white), 60);
+          }
+        }
+      }
+
+      .recipe-block-stats {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-column-gap: 2em;
+        flex: 4 4 auto;
+        padding: 1em;
+        justify-items: stretch;
+
+         * {
+           font-family: 'Work Sans', sans-serif;
+           @include font-size(16px);
+           color: black;
+           font-weight: medium;
+
+           &:nth-child(2n+1) {
+             text-align: right;
+           }
+         }
+      }
+    }
+  }
+
+  .content {
+    color: #333;
+    font-size: 0.8em;
+    padding: 1em;
+    opacity: .72;
+  }
+
+  .background-black {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+}

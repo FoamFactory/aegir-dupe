@@ -1,0 +1,76 @@
+@import './colors';
+@import './typography';
+@import './transitions';
+
+input, label {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.password-icon-container {
+  input {
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid palette(black);
+    display: block;
+    @include font-size(14px);
+    height: 50px;
+    padding: 15px;
+    @include transition(border-color .2s ease);
+    width: 100%;
+  }
+}
+
+label {
+  display: block;
+  @include font-size(11px);
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.label-description-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: .98;
+  flex: 2 2 auto;
+
+  h4.field-title {
+    color: palette(black);
+    font-weight: normal;
+    font-family: 'Eczar', serif;
+    @include font-size(24px);
+  }
+
+  p.field-description {
+    color: palette(black);
+    font-weight: 300;
+    font-family: 'Work Sans', sans-serif;
+    @include font-size(18px);
+    margin: 0;
+  }
+}
+
+button.standard {
+  box-sizing: border-box;
+  background-color: palette(cream-ale);
+  padding: 1em 1em 1em 1em;
+  min-width: 8em;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+  color: palette(charcoal);
+  line-height: 1.0;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  box-shadow: 0 2px 4px palette(charcoal, alpha25);
+
+  &:hover {
+    background-color: palette(cream-ale, light);
+  }
+
+  &:active {
+    background-color: palette(cream-ale, dark);
+  }
+}

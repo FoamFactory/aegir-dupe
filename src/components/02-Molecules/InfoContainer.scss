@@ -1,0 +1,35 @@
+@import '../../assets/styles/buttons';
+@import '../../assets/styles/colors';
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 2em 1em 2em 1em;
+  padding: .5em;
+
+  & > *:first-child {
+    flex: 1 1;
+  }
+
+  & > * {
+    flex: 10 10 99%;
+  }
+
+  & > .info-container-header {
+    border-bottom: .5px solid palette(grain);
+  }
+
+  & > .info-container-header-with-button {
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    border-bottom: .5px solid palette(grain);
+    align-items: end;
+    padding-bottom: .5em;
+  }
+
+  .info-container-content {
+    margin-top: 1em;
+  }
+}

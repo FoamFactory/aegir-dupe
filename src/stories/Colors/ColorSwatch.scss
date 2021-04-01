@@ -1,0 +1,48 @@
+.color-swatch {
+  padding-bottom: 0.2em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  padding-top: 100%;
+
+  &.large {
+    width: auto;
+    min-height: 5em;
+  }
+}
+
+.color-shade {
+  height: 4em;
+  width: 12em;
+  padding-bottom: 0.2em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.color-swatch-with-metadata,
+.shade-with-metadata {
+  margin: 0.5em;
+}
+
+.color-swatch-metadata {
+  font-size: 0.55rem;
+  box-sizing: content-box;
+  margin-top: 0.4em;
+
+  .color-swatch-name {
+    font-weight: bold;
+    font-size: 1.0rem;
+  }
+
+  .color-swatch-hexCode, .color-swatch-cssName {
+    font-family: 'Space Mono', monospace;
+  }
+}
+
+.multi-shade-container {
+  .shade-with-metadata {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+}

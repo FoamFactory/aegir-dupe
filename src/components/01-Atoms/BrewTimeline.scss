@@ -1,0 +1,105 @@
+@import '../../assets/styles/colors';
+
+.brewTimeline-tooltip {
+  text-align: center;
+}
+
+.brewTimeline {
+  display: flex;
+  flex-direction: column;
+
+  .brewTimeline-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 80%;
+    height: 1.5em;
+    margin: 1em 1em;
+
+    > *:first-child {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+    }
+
+    > *:last-child {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .plan-phase {
+      background-color: palette(grain);
+
+      &.faded {
+        background-color: palette(grain, faded);
+      }
+    }
+
+    .brewing-phase {
+      background-color: palette(cream-ale);
+
+      &.faded {
+        background-color: palette(cream-ale, faded);
+      }
+    }
+
+    .primaryFermentation-phase {
+      background-color: palette(california-common);
+
+      &.faded {
+        background-color: palette(california-common, faded)
+      }
+    }
+
+    .secondaryFermentation-phase {
+      background-color: palette(violet-eggplant);
+
+      &.faded {
+        background-color: palette(violet-eggplant, faded);
+      }
+    }
+
+    .aging-phase {
+      background-color: palette(jade);
+
+      &.faded {
+        background-color: palette(jade, faded);
+      }
+    }
+
+    .carbonation-phase {
+      background-color: palette(fire-brick);
+
+      &.faded {
+        background-color: palette(fire-brick, faded);
+      }
+    }
+  }
+
+  .brewTimeline-measure {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 1em;
+
+    hr {
+      flex: 4 4;
+      border-top: 2px solid palette(thunder);
+    }
+
+    .brewTimeline-measure-left {
+      margin: 0;
+      padding: 0;
+      border-left: 2px solid palette(thunder);
+    }
+
+    .brewTimeline-measure-right {
+      margin: 0;
+      padding: 0;
+      border-right: 2px solid palette(thunder);
+    }
+
+    .brewTimeline-measure-label {
+      margin: 0 .5em;
+    }
+  }
+}

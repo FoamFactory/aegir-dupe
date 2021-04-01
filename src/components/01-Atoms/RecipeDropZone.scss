@@ -1,0 +1,15 @@
+@import '../../assets/styles/colors';
+
+.recipe-drop-zone {
+  display: none;
+  width: 1em;
+  height: 235px;
+  margin-right: 1em;
+  border: 1px dashed palette(french-gray);
+
+  &.active {
+    display: block;
+    width: 300px;
+    border-radius: 8px;
+  }
+}

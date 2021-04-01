@@ -1,0 +1,46 @@
+@import '../../assets/styles/colors';
+
+.ribbon-arrow {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin-right: .5em;
+
+  svg {
+    min-height: 0;
+    flex: 0 0 auto;
+
+    path {
+      fill: black;
+      opacity: 0.3;
+
+      &.cream {
+        fill: palette(cream-ale);
+      }
+    }
+  }
+
+  .ribbon-arrow-middle {
+    color: black;
+    font-weight: bold;
+    background-color: palette(black, alpha30);
+    min-height: 2em;
+    flex: 2 2 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &.cream {
+      background-color: palette(cream-ale, faded);
+
+      .ribbon-arrow-text {
+        color: darken(palette(cream-ale), 50%);
+      }
+    }
+
+    .ribbon-arrow-text {
+      color: palette(black);
+    }
+  }
+}

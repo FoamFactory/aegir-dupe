@@ -1,0 +1,42 @@
+@import '../../assets/styles/colors';
+
+button.icon-button {
+  align-items: center;
+  background-color: palette(white);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid palette(french-gray);
+  padding: 5px;
+
+  svg {
+    fill: palette(french-gray);
+  }
+
+  &.active {
+    border: 1px solid palette(cream-ale);
+    background-color: palette(white);
+
+    svg {
+      fill: palette(cream-ale);
+    }
+
+    &:hover {
+      border: 1px solid palette(cream-ale);
+      background-color: palette(white);
+
+      svg {
+        fill: palette(cream-ale);
+      }
+    }
+  }
+
+  &:hover {
+    background-color: palette(french-gray, light);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

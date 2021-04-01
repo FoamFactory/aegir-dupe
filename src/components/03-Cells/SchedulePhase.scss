@@ -1,0 +1,14 @@
+@import '../../assets/styles/colors';
+
+.schedule-phase {
+  display: flex;
+  margin-top: 1em;
+
+  & > *:first-child {
+    flex: 1 1 8%;
+  }
+
+  & > * {
+    flex: 10 10 auto;
+  }
+}

@@ -1,0 +1,18 @@
+ul.avatarPack {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  li {
+    position: absolute;
+    filter: brightness(30%);
+  }
+
+  li:first-child {
+    top: 0;
+    left: 0;
+    filter: brightness(100%);
+  }
+}

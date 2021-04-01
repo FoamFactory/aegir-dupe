@@ -1,0 +1,12 @@
+.block-bar-container {
+  height: 8.5em;
+  padding: 1em .5em;
+
+  .block-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
+}
